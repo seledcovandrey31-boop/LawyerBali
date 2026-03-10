@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легализация скважин на Бали | Legalization of Wells in Bali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+        .lang-switch {
+            text-align: right;
+            padding: 10px;
+        }
+        .lang-switch a {
+            margin: 0 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="#" onclick="changeLang('ru')">RU</a> |
+        <a href="#" onclick="changeLang('en')">EN</a> |
+        <a href="#" onclick="changeLang('id')">ID</a>
+    </div>
+    <header>
+        <h1 id="title">Легализация частных скважин на Бали</h1>
+        <p id="subtitle">Профессиональные юридические услуги по оформлению документов для скважин</p>
+    </header>
+    <section>
+        <h2 id="about">О нас</h2>
+        <p id="about-text">Мы помогаем владельцам частных территорий на Бали легализовать скважины в соответствии с новым законом. Наши услуги включают консультации, сбор документов и полное сопровождение процесса. Свяжитесь с нами для быстрого и надежного оформления.</p>
+        
+        <h2 id="services">Услуги</h2>
+        <ul>
+            <li id="service1">Юридическая консультация</li>
+            <li id="service2">Сбор и подача документов</li>
+            <li id="service3">Партнерство с инженерами и подрядчиками</li>
+            <li id="service4">Онлайн-заявки и поддержка</li>
+        </ul>
+        
+        <h2 id="form-title">Оставить заявку</h2>
+        <form action="https://formspree.io/f/your-email" method="POST"> <!-- Замените на ваш сервис для форм, например Formspree или Google Forms -->
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <input type="tel" name="phone" placeholder="Ваш телефон">
+            <textarea name="message" placeholder="Описание вашей скважины и вопросы" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+    <footer>
+        <p id="footer">© 2026 Legal Wells Bali. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ru: {
+                title: "Легализация частных скважин на Бали",
+                subtitle: "Профессиональные юридические услуги по оформлению документов для скважин",
+                about: "О нас",
+                aboutText: "Мы помогаем владельцам частных территорий на Бали легализовать скважины в соответствии с новым законом. Наши услуги включают консультации, сбор документов и полное сопровождение процесса. Свяжитесь с нами для быстрого и надежного оформления.",
+                services: "Услуги",
+                service1: "Юридическая консультация",
+                service2: "Сбор и подача документов",
+                service3: "Партнерство с инженерами и подрядчиками",
+                service4: "Онлайн-заявки и поддержка",
+                formTitle: "Оставить заявку",
+                footer: "© 2026 Legal Wells Bali. Все права защищены."
+            },
+            en: {
+                title: "Legalization of Private Wells in Bali",
+                subtitle: "Professional legal services for well documentation",
+                about: "About Us",
+                aboutText: "We assist private property owners in Bali to legalize wells according to the new law. Our services include consultations, document collection, and full process support. Contact us for quick and reliable registration.",
+                services: "Services",
+                service1: "Legal Consultation",
+                service2: "Document Collection and Submission",
+                service3: "Partnerships with Engineers and Contractors",
+                service4: "Online Applications and Support",
+                formTitle: "Submit Application",
+                footer: "© 2026 Legal Wells Bali. All rights reserved."
+            },
+            id: {
+                title: "Legalitas Sumur Pribadi di Bali",
+                subtitle: "Layanan hukum profesional untuk pengurusan dokumen sumur",
+                about: "Tentang Kami",
+                aboutText: "Kami membantu pemilik lahan pribadi di Bali untuk melegalkan sumur sesuai dengan undang-undang baru. Layanan kami mencakup konsultasi, pengumpulan dokumen, dan pendampingan proses penuh. Hubungi kami untuk pendaftaran cepat dan andal.",
+                services: "Layanan",
+                service1: "Konsultasi Hukum",
+                service2: "Pengumpulan dan Pengajuan Dokumen",
+                service3: "Kemitraan dengan Insinyur dan Kontraktor",
+                service4: "Aplikasi Online dan Dukungan",
+                formTitle: "Kirim Permohonan",
+                footer: "© 2026 Legal Wells Bali. Hak cipta dilindungi."
+            }
+        };
+
+        function changeLang(lang) {
+            document.getElementById('title').innerText = translations[lang].title;
+            document.getElementById('subtitle').innerText = translations[lang].subtitle;
+            document.getElementById('about').innerText = translations[lang].about;
+            document.getElementById('about-text').innerText = translations[lang].aboutText;
+            document.getElementById('services').innerText = translations[lang].services;
+            document.getElementById('service1').innerText = translations[lang].service1;
+            document.getElementById('service2').innerText = translations[lang].service2;
+            document.getElementById('service3').innerText = translations[lang].service3;
+            document.getElementById('service4').innerText = translations[lang].service4;
+            document.getElementById('form-title').innerText = translations[lang].formTitle;
+            document.getElementById('footer').innerText = translations[lang].footer;
+            document.documentElement.lang = lang;
+        }
+
+        // По умолчанию русский
+        changeLang('ru');
+    </script>
+</body>
+</html>
